@@ -177,7 +177,7 @@ header {
 
 .auth-submit {
   width:260px;
-  height:68;
+  height:68px;
   border-radius:4px;
   background-color: #FCD5BA;
   color:#FF6633;
@@ -199,4 +199,50 @@ header {
   font-weight: 260;
   font-size:18px;
   font-weight: 400;
+ }
+
+.user-actions {
+  position:relative;
+  top:32px;
+
+}
+.registr {
+  background-color:white ;
+  text-decoration: none;
+  color:#70C05B;
+  border:1px solid #70C05B;
+  border-radius:4px;
+  margin-right:31px;
+}
+
+.reset {
+  text-decoration: none;
+  color:#606060;
+}
+
+.close-auth {
+  position:absolute;
+  right:0px;
+  top:0px;
+  width:40px;
+  height:40px;
+  border:none;
+}
+
+.catalog {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  height: 248px;
+  z-index: 5;
+  background-color: red;
+  left: 0;      
+  right: 0;
+  top:70px;
+}
+
+.categories {
+  display:flex;
+  justify-content: center;
+  width:1088px;
 }

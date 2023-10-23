@@ -6,14 +6,24 @@ import orders from '../img/orders.svg'
 import bucket from '../img/bucket.svg'
 import account_symb from '../img/account-symb.svg'
 import Account from './Account.js'
+import Catalog from './Catalog.js'
 
 class Header extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       isAccountVisible: false,
+      isCatalogVisible:false,
     }
     this.clickAccount = this.clickAccount.bind(this)
+  }
+
+  showCatalog = () => {
+    this.setState({ isCatalogVisible: true });
+  }
+
+  hideCatalog = () => {
+    this.setState({ isCatalogVisible: false });
   }
 
   render() {
@@ -27,7 +37,7 @@ class Header extends React.Component {
             deformator shop
           </li>
           <li className="nav-item">
-            <div className="button-catalog">
+            <div onMouseEnter={this.showCatalog} className="button-catalog">
               <div className="button-lines">
                 <div className="button-catalog-line"></div>
                 <div className="button-catalog-line"></div>
@@ -36,6 +46,9 @@ class Header extends React.Component {
               <p>Catalog</p>
             </div>
           </li>
+          {this.state.isCatalogVisible && (
+            <Catalog />
+          )}
           <li className="nav-item">
             <form className="search-form">
               <input placeholder="Find the product" className="search" />

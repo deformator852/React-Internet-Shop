@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './components/Header.js'
+import Main from './components/Main.js'
+import Footer from './components/Footer.js'
 import style from './css/style.css'
 
 class Root extends React.Component {
   render() {
     return (<div id="base">
+      <div id="overlay"></div>
       <Header />
+      <Main />
+      <Footer />
     </div>)
   }
 }

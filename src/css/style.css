@@ -4,14 +4,15 @@
 }
 
 body {
-  background-color: #FCD5BA;
+  background-color: #FBF8EC;
   color: #414141;
   margin: 0;
-  padding: 0;
-  
+  padding: 0;  
 }
 header {
   background-color:#FFFFFF;
+  width:100%;
+  margin:0px auto;
 }
 
 ::placeholder {
@@ -25,7 +26,7 @@ header {
   display: flex;
   justify-content: center;
   padding: 0 20px;
-  max-width: 1208px;
+  width: 1208px;
   margin:0px auto;
 }
 .nav ul {
@@ -123,14 +124,18 @@ header {
 .user-profile {
   position:absolute;
   top:150px;
-  left:40%;
+  right:275px;
   width:420px;
   height:420px;
   background-color:white;
   color:black;
-  z-index:20;
-  border-radius:4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  z-index: 501;
 }
 
 .auth-number {
@@ -143,37 +148,6 @@ header {
   border-radius: 4px;
 }
 
-.user-profile {
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background-color: #FCD5BA; 
-    opacity:0.7;
-    z-index: 2; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.authorization {
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 150px;
-  left: 40%;
-  width: 420px;
-  height: 420px;
-  background-color: white;
-  color: black;
-  border-radius: 4px;
-  z-index: 3;
-}
-
 
 .auth-submit {
   width:260px;
@@ -184,6 +158,11 @@ header {
   border:0px;
   font-size:24px;
   font-weight: 400;
+}
+
+.account {
+  position:relative;
+  left:40px;
 }
 
 .input-group {
@@ -233,12 +212,13 @@ header {
   display: flex;
   justify-content: center;
   position: absolute;
-  height: 248px;
+  height: 310px;
   z-index: 5;
-  background-color: red;
+  background-color: #FFFFFF;
   left: 0;      
   right: 0;
   top:70px;
+  box-shadow: 0 -10px 10px rgba(0.04, 0.04, 0.04, 0.04);
 }
 
 .categories {
@@ -246,3 +226,204 @@ header {
   justify-content: center;
   width:1088px;
 }
+
+.cat-block {
+  padding-left:100px;
+  margin-top:10px;
+}
+
+.cat {
+  color:#414141;
+  font-weight:700;
+  font-size:16px;
+  text-decoration:none;
+}
+
+.cat-block p {
+  margin-top:30px;
+}
+
+.main {
+  margin-left:396px;
+  display:flex;
+  max-width:1208px;
+  flex-direction: column;
+}
+
+.main-nav {
+  margin-top:34px;
+}
+
+.section-first,.section-second,.section-third,.section-fourth {
+  display:flex;
+}
+
+.section-first div {
+  margin-right:40px;
+}
+
+.main-nav {
+  display:flex;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color:#414141;
+}
+
+.main-nav a {
+  font-weight:400;
+  font-size:12px;
+}
+
+.main-nav p:nth-child(2) {
+  padding-left:15px;
+  padding-right:15px;
+  padding-top:3px;
+}
+
+.main h1 {
+  padding-bottom:45px;
+  font-weight:700;
+  font-size:50px;
+}
+
+.big-section-element {
+  width:584px;
+  height:200px;
+}
+
+.milk {
+  background: linear-gradient(to bottom, transparent, #70C05B), url("../img/milk.jpg");
+}
+
+.bread {
+  background: linear-gradient(to bottom, transparent, #FF6633), url("../img/bread.jpg");
+}
+
+.vegetables {
+  background: linear-gradient(to bottom, transparent, #70C05B), url("../img/fruits.jpg");
+}
+
+.section-element, .big-section-element {
+  border-radius:4px;
+  color:#FFFFFF;
+  font-weight: 700;
+  font-size:18px;
+}
+
+.section-element p,.big-section-element p{
+  position: relative;
+  top:160px;
+  left:11px;
+}
+
+.section-element {
+  width:272px;
+  height:200px;
+}
+
+.section-second div, .section-third div,.section-fourth div {
+  margin-right:40px;
+  margin-top:40px;
+}
+
+.frozen-products {
+  background: linear-gradient(to bottom, transparent, #70C05B), url("../img/frozen.jpg");
+}
+
+.beverages {
+  background: linear-gradient(to bottom, transparent, #70C05B), url("../img/beverages.jpg");
+}
+
+.confectionary {
+  background: linear-gradient(to bottom, transparent, #70C05B), url("../img/confectionary.jpg");
+}           
+.tea {
+  background: linear-gradient(to bottom, transparent, #70C05B), url("../img/tea.jpg");
+} 
+
+.balakleya {
+  background: linear-gradient(to bottom, transparent, #70C05B), url("../img/balakleya.jpg");
+}           
+.healthy {
+  background: linear-gradient(to bottom, transparent, #70C05B), url("../img/healthy.jpg");
+} 
+.pet {
+  background: linear-gradient(to bottom, transparent, #70C05B), url("../img/pet.jpg");
+}
+
+.baby {
+  background: linear-gradient(to bottom, transparent, #70C05B), url("../img/baby.jpg");
+} 
+
+.meat {
+  background: linear-gradient(to bottom, transparent, #70C05B), url("../img/meat.jpg");
+} 
+
+.non-food {
+  background: linear-gradient(to bottom, transparent, #70C05B), url("../img/non-food.jpg");
+}
+
+footer {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-image: url("../img/footer.jpg");
+  height:126px;
+  margin-bottom:1px;
+  margin-top:80px;
+}
+
+.info {
+  margin-top:23px;
+  margin-left:396px;
+  width:1166px;
+  height:76px;
+  color:#414141;
+  font-weight: 400;
+  font-size: 14px;
+
+}
+
+.info-inner {
+  display:flex;
+  margin-top:17px;
+}
+
+.info-inner p {
+  padding-right:43px;
+}
+
+.info-inner div {
+  display:flex;
+  margin-top:-5px;
+  position:relative;
+  margin-left:auto;
+}
+
+#github,#linkedin {
+  padding-right:0;
+}
+
+#github {
+  color:#000;
+  padding-right:15px;
+}
+
+#linkedin {
+  color:#0077B5;
+}
+
+.info-inner a {
+  color:#414141;
+  text-decoration: none;
+}
+
+.visible-button {
+  position: absolute;
+  right: 90px; /* Положение кнопки внутри контейнера */
+  top: 150px; /* Положение кнопки внутри контейнера */
+  background: none;
+  border: none;
+}
+

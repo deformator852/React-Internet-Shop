@@ -26,6 +26,10 @@ class Header extends React.Component {
     this.setState({ isCatalogVisible: false });
   }
 
+  closeAccount = () => {
+    this.setState({isAccountVisible:false})
+  }
+
   render() {
     return <header>
       <div className="nav">
@@ -36,8 +40,11 @@ class Header extends React.Component {
           <li className="nav-item logo-name">
             deformator shop
           </li>
-          <li className="nav-item">
-            <div onMouseEnter={this.showCatalog} className="button-catalog">
+          <li className="nav-item" onMouseOver={this.showCatalog}>
+            {this.state.isCatalogVisible && (
+            <Catalog hideCat={this.hideCatalog}/>
+            )}
+            <div className="button-catalog">
               <div className="button-lines">
                 <div className="button-catalog-line"></div>
                 <div className="button-catalog-line"></div>
@@ -46,9 +53,7 @@ class Header extends React.Component {
               <p>Catalog</p>
             </div>
           </li>
-          {this.state.isCatalogVisible && (
-            <Catalog />
-          )}
+
           <li className="nav-item">
             <form className="search-form">
               <input placeholder="Find the product" className="search" />
@@ -78,7 +83,7 @@ class Header extends React.Component {
               <Image classname="account-symb" src={account_symb} />
             </div>
             {this.state.isAccountVisible && (
-              <Account />
+              <Account closeAccount={this.closeAccount} />
             )}
           </li>
         </ul>

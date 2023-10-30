@@ -276,7 +276,7 @@ header {
   font-size:12px;
 }
 
-.main-nav p:nth-child(2) {
+.main-nav p:nth-child(2),.main-nav p:nth-child(4) {
   padding-left:15px;
   padding-right:15px;
   padding-top:3px;
@@ -421,9 +421,49 @@ footer {
 
 .visible-button {
   position: absolute;
-  right: 90px; /* Положение кнопки внутри контейнера */
-  top: 150px; /* Положение кнопки внутри контейнера */
+  right: 90px; 
+  top: 150px; 
   background: none;
   border: none;
 }
+
+.section-first a,.section-second a,.section-third a,.section-fourth a {
+  text-decoration: none;
+}
+
+.products {
+  width:1208px;
+  height:1174px;
+}
+
+.filter {
+  width:272px;
+  height:44px;
+  background-color:#F3F2F1;
+  display:flex;
+  align-items: center;
+}
+
+.filter p {
+  font-weight: 700;
+  font-size: 16px;
+  margin-left:10px;
+}
+
+.filtered-price {
+  display:flex;
+  margin-bottom:13px;
+}
+
+.filtered-price div {
+  width:124px;
+  height:40px;
+  border-radius: 4px;
+  border:1px solid #BFBFBF;
+  background-color:#FFFFFF;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
 

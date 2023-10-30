@@ -1,6 +1,4 @@
 import React from 'react';
-import footerLogo from '../img/logo.svg'
-import fiverr from '../img/fiverr.svg'
 import { FaGithub,FaLinkedin} from 'react-icons/fa';
 
 class Footer extends React.Component {

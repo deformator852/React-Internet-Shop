@@ -35,7 +35,7 @@ class Header extends React.Component {
       <div className="nav">
         <ul>
           <li className="nav-item logo">
-            <Image src={logo} width="32px" />
+            <a href="/"><Image src={logo} width="32px" /></a>
           </li>
           <li className="nav-item logo-name">
             deformator shop

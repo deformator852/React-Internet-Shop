@@ -2,8 +2,8 @@ import React from 'react';
 
 class Catalog extends React.Component{
   render() {
-     return (<div className="catalog">
-      <div className="categories" onMouseLeave={this.props.hideCat}>
+     return (<div className="catalog" onMouseLeave={this.props.hideCat}>
+      <div className="categories">
         <div className="cat-block">
           <p><a className="cat" href="#">Milk, cheese, egg</a></p>
           <p><a className="cat" href="#">Bread</a></p>

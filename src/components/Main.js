@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaAngleRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
 class Main extends React.Component {
   render() {
     return  (
@@ -11,7 +13,7 @@ class Main extends React.Component {
         </div>
         <h1>Catalog</h1>
         <div className="section-first">
-          <div className="milk big-section-element"><p>Milk,cheese,egg</p></div>
+          <Link to="products/milk-cheese-egg/"><div className="milk big-section-element"><p>Milk,cheese,egg</p></div></Link>
           <div className="bread section-element "><p>Bread</p></div>
           <div className="vegetables section-element"><p>Fruits and vegetables</p></div>
         </div>

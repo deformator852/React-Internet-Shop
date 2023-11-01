@@ -1,6 +1,7 @@
-import React from 'react';
-import Slider from 'rc-slider';
+import React,{useState} from 'react';
+import Slider,{Range} from 'rc-slider';
 import 'rc-slider/assets/index.css';
+import Switch from 'react-switch';
 
 class Filter extends React.Component {
    constructor(props) {
@@ -8,34 +9,40 @@ class Filter extends React.Component {
     this.state = {
       min: 50,
       max: 250,
+      checked:true,
     }
     this.onSliderChange = this.onSliderChange.bind(this)
     this.clearPrice = this.clearPrice.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
-  onSliderChange = (value) => {
+  onSliderChange (value){
     this.setState({
       min: value[0],
       max: value[1],
     });
   }
 
-  clearPrice = () => {
+  clearPrice(){
     this.setState({
       min:1,
       max:300
     });
   }
 
+  handleChange (isChecked){
+    this.setState({checked:isChecked });
+  };
+
   render () {
     return (<div className="aside-filter">
+              <div className="filter">
+                <p>Filter</p> 
+              </div>
               <div className="price-wrapper">
                 <div className="price">Price</div>
                 <div onClick = {this.clearPrice} className="price-clear"><p>Clear</p></div>
               </div>
-            <div className="filter">
-             <p>Filter</p> 
-            </div>
             <div className="choose-price">
               <div className="filtered-price">
                 <div className=""><p>{this.state.min}</p></div>
@@ -77,6 +84,10 @@ class Filter extends React.Component {
                   `
                 }
               </style>
+                <label>
+                <Switch onChange={this.handleChange} checked={this.state.checked}/>
+                  <span>{this.state.checked ? 'available' : 'not available'}</span>
+                </label>
             </div>
           </div>)
   }

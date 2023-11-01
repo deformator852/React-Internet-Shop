@@ -78,8 +78,9 @@ class Header extends React.Component {
             </div>
           </li>
           <li className="nav-item account">
-            <div onClick={this.clickAccount}>
-              account
+            <div onClick={this.clickAccount} className="account-container">
+              <div className="circle"></div>
+              <div className="username"><p>Nikita</p></div>
               <Image classname="account-symb" src={account_symb} />
             </div>
             {this.state.isAccountVisible && (

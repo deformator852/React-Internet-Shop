@@ -35,14 +35,14 @@ class ProductsMilk extends React.Component {
           <h1>Milk,cheese,egg</h1>
             <div className="content">
               <div className="products-row">
-                <Product price="5" img={combain} name='Combine KZS-1218 "DESNA-POLESIE GS12"' />
+                <Product price="5.0" img={combain} name='Combine KZS-1218 "DESNA-POLESIE GS12"' />
                 <Product price="4.5" img={milk} name='PROSTOKVASHINO drinking milk ' />
                 <Product price="5.2" img={condensed} name='Condensed milk ' />
               </div>
               <div className="products-row">
-                <Product price="3" img={butter} name='PROSTOKVASHINO butter' />
-                <Product price="2" img={yog_1} name='yogurt' />
-                <Product price="2" img={yog_2} name='yogurt' />
+                <Product price="3.0" img={butter} name='PROSTOKVASHINO butter' />
+                <Product price="2.0" img={yog_1} name='yogurt' />
+                <Product price="2.0" img={yog_2} name='yogurt' />
               </div>
           </div>
           <Filter />

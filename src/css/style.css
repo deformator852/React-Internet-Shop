@@ -544,7 +544,7 @@ footer {
 
 .aside-filter {
   position: absolute;
-  top:244px;
+  top:243px;
 }
 
 .products-row {
@@ -553,8 +553,33 @@ footer {
 }
 
 .product {
+  position: relative;
   width:272px;
-  height:349px;
+  height:300px;
   background-color:#FFFFFF;
   margin-left:40px;
+  box-shadow: 0.5px 0.5px 5px rgba(128, 128, 128, 0.5);
 }
+
+.product-price,.product-name,.product-bucket {
+  margin-left:8px;
+}
+
+.product-price {
+  color:#414141;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.product-bucket {
+  margin-bottom:8px;
+  position: absolute;
+  bottom:0;
+  width:256px;
+  height:40px;
+  background-color:#FFFFFF;
+  border:1px solid #70C05B;
+  border-radius:4px;
+}
+
+

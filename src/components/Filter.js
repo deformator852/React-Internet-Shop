@@ -84,8 +84,17 @@ class Filter extends React.Component {
                   `
                 }
               </style>
-                <label>
-                <Switch onChange={this.handleChange} checked={this.state.checked}/>
+                  {this.state.checked === false && (
+                    <style>
+                      {`
+                        .react-switch-bg {
+                        border: 1px solid #E0E0E0;
+                        }
+                      `}
+                    </style>
+                  )}   
+                <label>   
+                  <Switch checkedIcon="" uncheckedIcon="" activeBoxShadow="0 0 0" width={46} height={24} onColor="#70C05B" offColor="#F8F8F8" offHandleColor="#E0E0E0" onChange={this.handleChange} checked={this.state.checked}/>
                   <span>{this.state.checked ? 'available' : 'not available'}</span>
                 </label>
             </div>
